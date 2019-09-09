@@ -6,5 +6,6 @@ namespace VirtualPetsAmok
 {
     class VirtualPets
     {
+
     }
 }
