@@ -8,25 +8,18 @@ namespace VirtualPetsAmok
     {
 
         public string Name { get; set; }
-        public bool IsOrganic { get; }
+        public string Species { get; set;}
         public int Hunger { get; set; }
         public int Boredom { get; set; }
         public int Health { get; set; }
 
-        public VirtualPets (string name, string isOrganic)
+        public VirtualPets (string name, string species)
         {
             Name = name;
             Hunger = 50;
             Health = 100;
             Boredom = 50;
-            if (isOrganic.ToLower() == "o")
-            {
-                IsOrganic = true;
-            }
-            else if (isOrganic.ToLower() == "r")
-            {
-                IsOrganic = false;
-            }
+            Species = species;
             
         }
     }
