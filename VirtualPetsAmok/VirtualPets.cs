@@ -17,7 +17,7 @@ namespace VirtualPetsAmok
         {
             Name = name;
             Hunger = 50;
-            Health = 100;
+            Health = 70;
             Boredom = 50;
             Species = species;
             
@@ -40,6 +40,41 @@ namespace VirtualPetsAmok
             Console.WriteLine("Your pet's boredom is " + Boredom);
             Console.WriteLine("Your pet's Hunger is " + Hunger);
             Console.ReadLine();
+            Console.Clear();
+        }
+        public void FeedPet()
+        {
+            Console.Clear();
+            Hunger -= 10;
+            if (Hunger < 0) Hunger = 0;
+            Console.WriteLine(Name + "'s current hunger is now " + Hunger);
+            Console.ReadLine();
+            Console.Clear();
+        }
+        public void PlayPet()
+        {
+            Console.Clear();
+            Boredom -= 10;
+            if (Boredom < 0) Boredom = 0;
+            Console.WriteLine(Name + "'s current boredom is now " + Boredom);
+            Console.ReadLine();
+            Console.Clear();
+        }
+        public void DoctorPet()
+        {
+            Console.Clear();
+            if(Health == 100)
+            {
+                Console.WriteLine(Name + "'s health is already full");
+            }
+            else
+            {
+                Health += 10;
+                if (Health > 100) Health = 100;
+                Console.WriteLine(Name + "'s current health is now " + Health);
+            }
+            Console.ReadLine();
+            Console.Clear();
         }
 
     }
