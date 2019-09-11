@@ -22,5 +22,16 @@ namespace VirtualPetsAmok
             Species = species;
             
         }
+        public VirtualPets()
+        {
+
+        }
+
+        public void CheckInfo()
+        {
+            Console.Clear();
+            Console.WriteLine("You pet's name is " + Name + " Your pet's species is " + Species);
+            Console.ReadLine();
+        }
     }
 }
