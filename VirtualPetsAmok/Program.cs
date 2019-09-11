@@ -22,7 +22,8 @@ namespace VirtualPetsAmok
                 //menu
                 Console.WriteLine("To Return to Main Menu: type (m)");
                 Console.WriteLine("To create a pet: type (c)");
-                Console.WriteLine("To check your pets information: type (s)");
+                Console.WriteLine("To check your pets information: type (i)");
+                Console.WriteLine("To check your pets status: type (s)");
                 userInput = Console.ReadLine();
                 if (userInput.ToLower() == "m")
                 {
@@ -32,9 +33,13 @@ namespace VirtualPetsAmok
                 {
                     newPet = menu.PetCreation();
                 }
-                else if (userInput.ToLower() == "s")
+                else if (userInput.ToLower() == "i")
                 {
                     newPet.CheckInfo();
+                }
+                else if(userInput.ToLower() == "s")
+                {
+                    newPet.CheckStatus();
                 }
             }
             Console.Clear();

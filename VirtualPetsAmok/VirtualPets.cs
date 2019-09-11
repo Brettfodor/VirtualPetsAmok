@@ -26,12 +26,21 @@ namespace VirtualPetsAmok
         {
 
         }
-
         public void CheckInfo()
         {
             Console.Clear();
-            Console.WriteLine("You pet's name is " + Name + " Your pet's species is " + Species);
+            Console.WriteLine("Your pet's name is \"" + Name + "\" Your pet's species is " + Species);
+            Console.WriteLine("\n Press 'Enter' to continue");
             Console.ReadLine();
         }
+        public void CheckStatus()
+        {
+            Console.Clear();
+            Console.WriteLine("Your pet's health is " + Health);
+            Console.WriteLine("Your pet's boredom is " + Boredom);
+            Console.WriteLine("Your pet's Hunger is " + Hunger);
+            Console.ReadLine();
+        }
+
     }
 }

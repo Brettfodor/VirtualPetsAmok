@@ -50,7 +50,7 @@ namespace VirtualPetsAmok
 
             Console.Clear();
             // Create Pet
-           VirtualPets newPet = new VirtualPets(petCreationName, petCreationSpecies);
+            VirtualPets newPet = new VirtualPets(petCreationName, petCreationSpecies);
             Console.WriteLine("Your awesome new pet " + petCreationName + " is ready to play!");
 
 
