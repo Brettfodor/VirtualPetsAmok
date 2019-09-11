@@ -10,6 +10,7 @@ namespace VirtualPetsAmok
             
             Menu menu = new Menu();
             bool inGame = false;
+            //Main Menu
 
             inGame = menu.MainMenu();
 
