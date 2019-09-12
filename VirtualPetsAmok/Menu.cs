@@ -40,6 +40,7 @@ namespace VirtualPetsAmok
         }
         public void Game(bool inGame)
         {
+            VirtualPetShelter myShelter = new VirtualPetShelter();
             VirtualPets newPet = new VirtualPets();
             string userInput;
             while (inGame)
@@ -62,7 +63,7 @@ namespace VirtualPetsAmok
                 }
                 else if (userInput.ToLower() == "c")
                 {
-                    newPet.PetCreation();
+                    myShelter.PetCreation();
 
                 }
                 else if (userInput.ToLower() == "i")

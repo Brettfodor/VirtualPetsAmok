@@ -8,7 +8,7 @@ namespace VirtualPetsAmok
         {
             // variables
             
-            Menu menu = new Menu();
+            Menu menu  = new Menu();
             bool inGame = false;
             //Main Menu
 
@@ -19,3 +19,4 @@ namespace VirtualPetsAmok
         }
     }
 }
+ 

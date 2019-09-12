@@ -8,14 +8,14 @@ namespace VirtualPetsAmok.Tests
         [Fact]
         public void Can_Create_Pet_Instance()
         {
-            new VirtualPets("Mink","o");
+            new VirtualPets();
 
         }
         [Fact]
         public void Pet_Has_Name()
         {
             // Arrange 
-          var myPet =  new VirtualPets("Mink", "o");
+          var myPet =  new VirtualPets();
 
             //Act
             myPet.Name = "Rainbow";
@@ -28,7 +28,7 @@ namespace VirtualPetsAmok.Tests
         public void Pet_Has_Hunger()
         {
             // Arrange 
-            var myPet = new VirtualPets("Mink", "o");
+            var myPet = new VirtualPets();
 
             //Act
             myPet.Hunger = 40;
@@ -41,7 +41,7 @@ namespace VirtualPetsAmok.Tests
         public void Pet_Has_Boredom()
         {
             // Arrange 
-            var myPet = new VirtualPets("Mink", "o");
+            var myPet = new VirtualPets();
 
             //Act
             myPet.Boredom = 40;
@@ -54,7 +54,7 @@ namespace VirtualPetsAmok.Tests
         public void Pet_Has_Health()
         {
             // Arrange 
-            var myPet = new VirtualPets("Mink", "o");
+            var myPet = new VirtualPets();
 
             //Act
             myPet.Health = 40;
@@ -62,6 +62,25 @@ namespace VirtualPetsAmok.Tests
             // Assert
             Assert.Equal(40, myPet.Health);
 
+            
+
         }
+        [Fact]
+        public void Shelter_Exists_in_Game()
+        {//Arrange
+            var petShelter = new VirtualPetShelter();
+                
+                }
+        [Fact]
+        public void Shelter_Adds_Pets()
+        {
+            var myShelter = new VirtualPetShelter();
+
+            myShelter.PetCreation();
+
+            Assert.Equal(1, myShelter.petsInShelter.Count);
+        }
+
+            
     }
 }

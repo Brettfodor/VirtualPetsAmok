@@ -13,41 +13,21 @@ namespace VirtualPetsAmok
         public int Boredom { get; set; }
         public int Health { get; set; }
 
-        public VirtualPets ()
+        public VirtualPets (string name, string species)
         {
-           
+            Name = name;
             Hunger = 50;
             Health = 70;
             Boredom = 50;
+            Species = species;
            
             
         }
-        public void PetCreation()
+        public VirtualPets()
         {
-            Console.Clear();
-
-            //Get name from user
-            Console.WriteLine("What should your pet's name be?");
-
-             this.Name = Console.ReadLine();
-
-            Console.Clear();
-            // Get species from user
-            Console.WriteLine("What species should your pet be?");
-            this.Species = Console.ReadLine();
-
-            Console.Clear();
-            // Create Pet
-            
-            Console.WriteLine("Your awesome new pet " + this.Name + " is ready to play!");
-
-
-            Console.WriteLine("Press 'Enter' to continue");
-            Console.ReadLine();
-            Console.Clear();
-
             
         }
+
         public void CheckInfo()
         {
             Console.Clear();
