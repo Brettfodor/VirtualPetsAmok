@@ -15,27 +15,32 @@ namespace VirtualPetsAmok
 
         public VirtualPets (string name, string species)
         {
-            
+            Name = name;
             Hunger = 50;
             Health = 70;
             Boredom = 50;
-            
+            Species = species;
            
             
         }
         public VirtualPets()
         {
-            
+            Name = Name;
+            Hunger = 50;
+            Health = 70;
+            Boredom = 50;
+            Species = Species;
+
         }
-        public void PetCreation()
+        public VirtualPets PetCreation()
         {
             //
-            VirtualPetShelter StoreAnimalsInList = new VirtualPetShelter();
 
-            Console.Clear();
+
+             Console.Clear();
 
             //Get name from user
-            Console.WriteLine("What should your pet's name be?");
+            //Console.WriteLine("What should your pet's name be?");
 
             Name = Console.ReadLine();
 
@@ -44,27 +49,32 @@ namespace VirtualPetsAmok
 
             Console.WriteLine("What species should your pet be?");
 
-            Species = Console.ReadLine();
+             Species = Console.ReadLine();
 
-            Console.Clear();
+            //Console.Clear();
             // Create Pet
 
             VirtualPets myPet = new VirtualPets(Name, Species);
 
-            StoreAnimalsInList.petsInShelter.Add(myPet);
+            return myPet;
 
-            Console.WriteLine("Your awesome new pet " + Name + " is ready to play!");
+           
+
+            //Console.WriteLine("Your awesome new pet " + Name + " is ready to play!");
 
 
-            Console.WriteLine("Press 'Enter' to continue");
-            Console.ReadLine();
-            Console.Clear();
+            //Console.WriteLine("Press 'Enter' to continue");
+            //Console.ReadLine();
+            //Console.Clear();
 
 
         }
 
+        
+
         public void CheckInfo()
         {
+            
             Console.Clear();
             Console.WriteLine("Your pet's name is \"" + Name + "\" Your pet's species is " + Species);
             Console.WriteLine("\n Press 'Enter' to continue");
