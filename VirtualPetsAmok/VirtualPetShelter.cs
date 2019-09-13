@@ -6,41 +6,41 @@ namespace VirtualPetsAmok
 {
     public class VirtualPetShelter
     {
-        public void PetCreation()
-        {
-            //
+        //public void PetCreation()
+        //{
+        //    //
 
 
-            Console.Clear();
+        //    Console.Clear();
 
-            //Get name from user
-            Console.WriteLine("What should your pet's name be?");
+        //    //Get name from user
+        //    Console.WriteLine("What should your pet's name be?");
 
-            string Name = Console.ReadLine();
+        //    string Name = Console.ReadLine();
 
-            Console.Clear();
-            // Get species from user
+        //    Console.Clear();
+        //    // Get species from user
 
-            Console.WriteLine("What species should your pet be?");
+        //    Console.WriteLine("What species should your pet be?");
 
-            string Species = Console.ReadLine();
+        //    string Species = Console.ReadLine();
 
-            Console.Clear();
-            // Create Pet
+        //    Console.Clear();
+        //    // Create Pet
 
-            VirtualPets myPet = new VirtualPets(Name, Species);
+        //    VirtualPets myPet = new VirtualPets(Name, Species);
 
-            petsInShelter.Add(myPet);
+        //    petsInShelter.Add(myPet);
 
-            Console.WriteLine("Your awesome new pet " + Name + " is ready to play!");
-
-
-            Console.WriteLine("Press 'Enter' to continue");
-            Console.ReadLine();
-            Console.Clear();
+        //    Console.WriteLine("Your awesome new pet " + Name + " is ready to play!");
 
 
-        }
+        //    Console.WriteLine("Press 'Enter' to continue");
+        //    Console.ReadLine();
+        //    Console.Clear();
+
+
+        //}
 
         public List<VirtualPets> petsInShelter = new List<VirtualPets>();
 

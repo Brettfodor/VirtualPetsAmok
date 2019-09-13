@@ -40,7 +40,7 @@ namespace VirtualPetsAmok
         }
         public void Game(bool inGame)
         {
-            VirtualPetShelter myShelter = new VirtualPetShelter();
+            VirtualPets myShelter = new VirtualPets();
             VirtualPets newPet = new VirtualPets();
             string userInput;
             while (inGame)

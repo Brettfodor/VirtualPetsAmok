@@ -15,17 +15,52 @@ namespace VirtualPetsAmok
 
         public VirtualPets (string name, string species)
         {
-            Name = name;
+            
             Hunger = 50;
             Health = 70;
             Boredom = 50;
-            Species = species;
+            
            
             
         }
         public VirtualPets()
         {
             
+        }
+        public void PetCreation()
+        {
+            //
+            VirtualPetShelter StoreAnimalsInList = new VirtualPetShelter();
+
+            Console.Clear();
+
+            //Get name from user
+            Console.WriteLine("What should your pet's name be?");
+
+            Name = Console.ReadLine();
+
+            Console.Clear();
+            // Get species from user
+
+            Console.WriteLine("What species should your pet be?");
+
+            Species = Console.ReadLine();
+
+            Console.Clear();
+            // Create Pet
+
+            VirtualPets myPet = new VirtualPets(Name, Species);
+
+            StoreAnimalsInList.petsInShelter.Add(myPet);
+
+            Console.WriteLine("Your awesome new pet " + Name + " is ready to play!");
+
+
+            Console.WriteLine("Press 'Enter' to continue");
+            Console.ReadLine();
+            Console.Clear();
+
+
         }
 
         public void CheckInfo()
