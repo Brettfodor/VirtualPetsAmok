@@ -6,11 +6,10 @@ namespace VirtualPetsAmok
 {
     public class VirtualPetShelter
     {
+        public List<VirtualPets> petsInShelter = new List<VirtualPets>();
+
         public void PetCreation()
         {
-            //
-
-
             Console.Clear();
 
             //Get name from user
@@ -33,17 +32,29 @@ namespace VirtualPetsAmok
             petsInShelter.Add(myPet);
 
             Console.WriteLine("Your awesome new pet " + Name + " is ready to play!");
-
-
             Console.WriteLine("Press 'Enter' to continue");
             Console.ReadLine();
             Console.Clear();
-
+        }
+        public void AllCheckInfo()
+        {
 
         }
+        public void AllCheckStatus()
+        {
 
-        public List<VirtualPets> petsInShelter = new List<VirtualPets>();
+        }
+        public void AllFeedPet()
+        {
 
+        }
+        public void AllPlayPet()
+        {
 
+        }
+        public void AllDoctorPet()
+        {
+
+        }
     }
 }
