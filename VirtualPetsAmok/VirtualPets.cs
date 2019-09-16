@@ -55,19 +55,19 @@ namespace VirtualPetsAmok
         {
             Boredom -= 10;
             if (Boredom < 0) Boredom = 0;
-            Console.WriteLine(Name + "'s current boredom is now " + Boredom);
+            Console.WriteLine("\n" + Name + "'s current boredom is now " + Boredom);
         }
         public void DoctorPet()
         {
             if(Health == 100)
             {
-                Console.WriteLine(Name + "'s health is already full");
+                Console.WriteLine("\n" + Name + "'s health is already full");
             }
             else
             {
                 Health += 10;
                 if (Health > 100) Health = 100;
-                Console.WriteLine(Name + "'s current health is now " + Health);
+                Console.WriteLine("\n" + Name + "'s current health is now " + Health);
             }
         }
 
