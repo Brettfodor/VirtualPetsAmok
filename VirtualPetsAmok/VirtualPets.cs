@@ -62,14 +62,12 @@ namespace VirtualPetsAmok
             if(Health == 100)
             {
                 Console.WriteLine(Name + "'s health is already full");
-                Console.WriteLine("\n Press 'Enter' to continue");
             }
             else
             {
                 Health += 10;
                 if (Health > 100) Health = 100;
                 Console.WriteLine(Name + "'s current health is now " + Health);
-                Console.WriteLine("\n Press 'Enter' to continue");
             }
         }
 
