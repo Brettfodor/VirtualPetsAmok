@@ -49,8 +49,7 @@ namespace VirtualPetsAmok
         {
             Hunger -= 10;
             if (Hunger < 0) Hunger = 0;
-            Console.WriteLine(Name + "'s current hunger is now " + Hunger);
-            Console.WriteLine("\n Press 'Enter' to continue");
+            Console.WriteLine("\n" + Name + "'s current hunger is now " + Hunger);
         }
         public void PlayPet()
         {

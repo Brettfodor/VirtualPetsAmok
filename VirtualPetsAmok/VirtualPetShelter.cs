@@ -68,6 +68,10 @@ namespace VirtualPetsAmok
         {
             Console.Clear();
 
+            foreach (VirtualPets pet in petsInShelter) pet.FeedPet();
+
+            if (petsInShelter.Count == 0) this.NoticeNoPets();
+
             Console.WriteLine("\n Press 'Enter' to continue");
             Console.ReadLine();
             Console.Clear();
