@@ -50,22 +50,43 @@ namespace VirtualPetsAmok
 
             Console.WriteLine("\n Press 'Enter' to continue");
             Console.ReadLine();
+            Console.Clear();
         }
         public void AllCheckStatus()
         {
+            Console.Clear();
 
+            foreach (VirtualPets pet in petsInShelter) pet.CheckStatus();
+
+            if (petsInShelter.Count == 0) this.NoticeNoPets();
+
+            Console.WriteLine("\n Press 'Enter' to continue");
+            Console.ReadLine();
+            Console.Clear();
         }
         public void AllFeedPet()
         {
+            Console.Clear();
 
+            Console.WriteLine("\n Press 'Enter' to continue");
+            Console.ReadLine();
+            Console.Clear();
         }
         public void AllPlayPet()
         {
+            Console.Clear();
 
+            Console.WriteLine("\n Press 'Enter' to continue");
+            Console.ReadLine();
+            Console.Clear();
         }
         public void AllDoctorPet()
         {
+            Console.Clear();
 
+            Console.WriteLine("\n Press 'Enter' to continue");
+            Console.ReadLine();
+            Console.Clear();
         }
     }
 }

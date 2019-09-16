@@ -38,37 +38,29 @@ namespace VirtualPetsAmok
         }
         public void CheckStatus()
         {
-            Console.Clear();
+            Console.WriteLine("\n----------------------");
+            Console.WriteLine(Name);
+            Console.WriteLine("----------------------");
             Console.WriteLine("Your pet's health is " + Health);
             Console.WriteLine("Your pet's boredom is " + Boredom);
             Console.WriteLine("Your pet's Hunger is " + Hunger);
-            Console.WriteLine("\n Press 'Enter' to continue");
-            Console.ReadLine();
-            Console.Clear();
         }
         public void FeedPet()
         {
-            Console.Clear();
             Hunger -= 10;
             if (Hunger < 0) Hunger = 0;
             Console.WriteLine(Name + "'s current hunger is now " + Hunger);
             Console.WriteLine("\n Press 'Enter' to continue");
-            Console.ReadLine();
-            Console.Clear();
         }
         public void PlayPet()
         {
-            Console.Clear();
             Boredom -= 10;
             if (Boredom < 0) Boredom = 0;
             Console.WriteLine(Name + "'s current boredom is now " + Boredom);
             Console.WriteLine("\n Press 'Enter' to continue");
-            Console.ReadLine();
-            Console.Clear();
         }
         public void DoctorPet()
         {
-            Console.Clear();
             if(Health == 100)
             {
                 Console.WriteLine(Name + "'s health is already full");
@@ -81,8 +73,6 @@ namespace VirtualPetsAmok
                 Console.WriteLine(Name + "'s current health is now " + Health);
                 Console.WriteLine("\n Press 'Enter' to continue");
             }
-            Console.ReadLine();
-            Console.Clear();
         }
 
     }
