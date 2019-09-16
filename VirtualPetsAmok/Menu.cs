@@ -48,7 +48,6 @@ namespace VirtualPetsAmok
                 Console.WriteLine("To Return to Main Menu: type (m)");
                 Console.WriteLine("To create a pet: type (c)");
 
-
                 Console.WriteLine("\nInteract with pet");
                 Console.WriteLine("To check your pets information: type (i)");
                 Console.WriteLine("To check your pets status: type (s)");
@@ -63,7 +62,6 @@ namespace VirtualPetsAmok
                 else if (userInput.ToLower() == "c")
                 {
                     myShelter.PetCreation();
-
                 }
                 else if (userInput.ToLower() == "i")
                 {

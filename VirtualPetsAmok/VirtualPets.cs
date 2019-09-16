@@ -25,9 +25,13 @@ namespace VirtualPetsAmok
         }
         public VirtualPets()
         {
-            
-        }
+            Name = Name;
+            Hunger = 50;
+            Health = 70;
+            Boredom = 50;
+            Species = Species;
 
+        }
         public void CheckInfo()
         {
             Console.WriteLine("Your Pet " + Name + " is a " + Species);
