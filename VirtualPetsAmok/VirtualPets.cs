@@ -56,7 +56,6 @@ namespace VirtualPetsAmok
             Boredom -= 10;
             if (Boredom < 0) Boredom = 0;
             Console.WriteLine(Name + "'s current boredom is now " + Boredom);
-            Console.WriteLine("\n Press 'Enter' to continue");
         }
         public void DoctorPet()
         {
