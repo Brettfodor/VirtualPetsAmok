@@ -30,10 +30,7 @@ namespace VirtualPetsAmok
 
         public void CheckInfo()
         {
-            Console.Clear();
-            Console.WriteLine("Your pet's name is \"" + Name + "\" Your pet's species is " + Species);
-            Console.WriteLine("\n Press 'Enter' to continue");
-            Console.ReadLine();
+            Console.WriteLine("Your Pet " + Name + " is a " + Species);
         }
         public void CheckStatus()
         {

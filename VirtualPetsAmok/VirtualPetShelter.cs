@@ -8,6 +8,10 @@ namespace VirtualPetsAmok
     {
         public List<VirtualPets> petsInShelter = new List<VirtualPets>();
 
+        public void NoticeNoPets()
+        {
+            Console.WriteLine("There are no pets currently in your shelter");
+        }
         public void PetCreation()
         {
             Console.Clear();
@@ -38,7 +42,14 @@ namespace VirtualPetsAmok
         }
         public void AllCheckInfo()
         {
+            Console.Clear();
 
+            foreach (VirtualPets pet in petsInShelter) pet.CheckInfo();
+
+            if (petsInShelter.Count == 0) this.NoticeNoPets();
+
+            Console.WriteLine("\n Press 'Enter' to continue");
+            Console.ReadLine();
         }
         public void AllCheckStatus()
         {
