@@ -15,7 +15,9 @@ namespace VirtualPetsAmok
         public void PetCreation()
         {
             Console.Clear();
-
+            // Get pet type from user
+            Console.WriteLine("Should your pet be Organic or Robotic? (type 'o' for Organic or 'r' for Robotic)");
+            string type = Console.ReadLine();
             //Get name from user
             Console.WriteLine("What should your pet's name be?");
 
@@ -31,9 +33,17 @@ namespace VirtualPetsAmok
             Console.Clear();
             // Create Pet
 
-            VirtualPets myPet = new VirtualPets(Name, Species);
+            VirtualPets mypet;
+            if(type == "o")
+            {
+                 mypet = new OrganicPet(Name, Species);
+            }
+            else
+            {
+                 mypet = new RoboticPet(Name, Species);
+            }
 
-            petsInShelter.Add(myPet);
+            petsInShelter.Add(mypet);
 
             Console.WriteLine("Your awesome new pet " + Name + " is ready to play!");
             Console.WriteLine("Press 'Enter' to continue");
