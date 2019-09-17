@@ -76,9 +76,7 @@ namespace VirtualPetsAmok.Tests
         {
             var myShelter = new VirtualPetShelter();
 
-            myShelter.PetCreation();
-
-            Assert.Equal(1, myShelter.petsInShelter.Count);
+            
         }
 
             

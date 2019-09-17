@@ -41,14 +41,12 @@ namespace VirtualPetsAmok
         public void Game(bool inGame)
         {
             VirtualPetShelter myShelter = new VirtualPetShelter();
-            VirtualPets newPet = new VirtualPets();
             string userInput;
             while (inGame)
             {
                 //menu
                 Console.WriteLine("To Return to Main Menu: type (m)");
                 Console.WriteLine("To create a pet: type (c)");
-
 
                 Console.WriteLine("\nInteract with pet");
                 Console.WriteLine("To check your pets information: type (i)");
@@ -64,27 +62,26 @@ namespace VirtualPetsAmok
                 else if (userInput.ToLower() == "c")
                 {
                     myShelter.PetCreation();
-
                 }
                 else if (userInput.ToLower() == "i")
                 {
-                    newPet.CheckInfo();
+                    myShelter.AllCheckInfo();
                 }
                 else if (userInput.ToLower() == "s")
                 {
-                    newPet.CheckStatus();
+                    myShelter.AllCheckStatus();
                 }
                 else if (userInput.ToLower() == "f")
                 {
-                    newPet.FeedPet();
+                    myShelter.AllFeedPet();
                 }
                 else if (userInput.ToLower() == "p")
                 {
-                    newPet.PlayPet();
+                    myShelter.AllPlayPet();
                 }
                 else if (userInput.ToLower() == "d")
                 {
-                    newPet.DoctorPet();
+                    myShelter.AllDoctorPet();
                 }
                 Console.Clear();
             }

@@ -6,11 +6,14 @@ namespace VirtualPetsAmok
 {
     public class VirtualPetShelter
     {
+        public List<VirtualPets> petsInShelter = new List<VirtualPets>();
+
+        public void NoticeNoPets()
+        {
+            Console.WriteLine("There are no pets currently in your shelter");
+        }
         public void PetCreation()
         {
-            //
-
-
             Console.Clear();
 
             //Get name from user
@@ -33,17 +36,71 @@ namespace VirtualPetsAmok
             petsInShelter.Add(myPet);
 
             Console.WriteLine("Your awesome new pet " + Name + " is ready to play!");
-
-
             Console.WriteLine("Press 'Enter' to continue");
             Console.ReadLine();
             Console.Clear();
-
-
         }
+        public void AllCheckInfo()
+        {
+            Console.Clear();
 
-        public List<VirtualPets> petsInShelter = new List<VirtualPets>();
+            foreach (VirtualPets pet in petsInShelter) pet.CheckInfo();
 
+            if (petsInShelter.Count == 0) this.NoticeNoPets();
 
+            Console.WriteLine("\n Press 'Enter' to continue");
+            Console.ReadLine();
+            Console.Clear();
+        }
+        public void AllCheckStatus()
+        {
+            Console.Clear();
+
+            foreach (VirtualPets pet in petsInShelter) pet.CheckStatus();
+
+            if (petsInShelter.Count == 0) this.NoticeNoPets();
+
+            Console.WriteLine("\n Press 'Enter' to continue");
+            Console.ReadLine();
+            Console.Clear();
+        }
+        public void AllFeedPet()
+        {
+            Console.Clear();
+
+            foreach (VirtualPets pet in petsInShelter) pet.FeedPet();
+
+            if (petsInShelter.Count == 0) this.NoticeNoPets();
+
+            Console.WriteLine("\n Press 'Enter' to continue");
+            Console.ReadLine();
+            Console.Clear();
+        }
+        public void AllPlayPet()
+        {
+            Console.Clear();
+
+            foreach (VirtualPets pet in petsInShelter) pet.PlayPet();
+
+            if (petsInShelter.Count == 0) this.NoticeNoPets();
+
+            Console.WriteLine("\n Press 'Enter' to continue");
+            Console.ReadLine();
+            Console.Clear();
+        }
+        public void AllDoctorPet()
+        {
+            Console.Clear();
+
+            foreach (VirtualPets pet in petsInShelter) pet.DoctorPet();
+
+            if (petsInShelter.Count == 0) this.NoticeNoPets();
+
+            Console.WriteLine("\n Press 'Enter' to continue");
+            Console.ReadLine();
+            Console.Clear();
+        }
     }
 }
+
+        
