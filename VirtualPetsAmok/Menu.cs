@@ -89,7 +89,7 @@ namespace VirtualPetsAmok
                 {
                     
                    VirtualPets selectedPet = this.SelectPet(myShelter);
-                    this.InteractWithSelectedPet(selectedPet, myShelter);
+                   this.InteractWithSelectedPet(selectedPet, myShelter);
                 }
                 myShelter.TickTime();
                 Console.Clear();
@@ -204,15 +204,9 @@ namespace VirtualPetsAmok
             while (correctInput == false)
             {
                 bool isNumeric = false;
-                
-                
-                    string userInput = Console.ReadLine();
-
-                    isNumeric = int.TryParse(userInput, out userInputInt);
-                
-                
+                string userInput = Console.ReadLine();
+                isNumeric = int.TryParse(userInput, out userInputInt);
                 if (isNumeric == true)
-
                 {
                     if (userInputInt > 0 && userInputInt <= myShelter.petsInShelter.Count) isInRange = true;
                 }
@@ -220,7 +214,6 @@ namespace VirtualPetsAmok
                 {
                     correctInput = true;
                 }
-                Console.Clear();
             }
             return userInputInt;
         }
