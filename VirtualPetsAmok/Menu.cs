@@ -89,7 +89,7 @@ namespace VirtualPetsAmok
                 {
                     
                    VirtualPets selectedPet = this.SelectPet(myShelter);
-                    this.InteractWithSelectedPet(selectedPet);
+                    this.InteractWithSelectedPet(selectedPet, myShelter);
                 }
                 Console.Clear();
             }
@@ -113,7 +113,7 @@ namespace VirtualPetsAmok
 
             return selectedPet;
         }
-        public void InteractWithSelectedPet(VirtualPets selectedPet)
+        public void InteractWithSelectedPet(VirtualPets selectedPet, VirtualPetShelter myShelter)
         {if (selectedPet is RoboticPet)
             {
                 Console.WriteLine("\nInteract with pet");
@@ -122,6 +122,7 @@ namespace VirtualPetsAmok
                 Console.WriteLine("To charge your pet's battery: type (f)");
                 Console.WriteLine("To play with your pet: type (p)");
                 Console.WriteLine("To take your pet to the mechanic: type (d)");
+                Console.WriteLine("To offer the pet up for adoption: type (a)");
             }
          else
             {
@@ -131,6 +132,7 @@ namespace VirtualPetsAmok
                 Console.WriteLine("To feed your pet: type (f)");
                 Console.WriteLine("To play with your pet: type (p)");
                 Console.WriteLine("To take your pet to the doctor: type (d)");
+                Console.WriteLine("To offer the pet up for adoption: type (a)");
 
             }
 
@@ -174,6 +176,14 @@ namespace VirtualPetsAmok
                 Console.WriteLine("\nPress 'Enter' to continue");
                 Console.ReadLine();
             }
+            else if (userInput.ToLower() == "a")
+            {
+                Console.Clear();
+                myShelter.AdoptPet(selectedPet);
+                Console.WriteLine("\nPress 'Enter' to continue");
+                Console.ReadLine();
+            }
+
             Console.Clear();
         }
 

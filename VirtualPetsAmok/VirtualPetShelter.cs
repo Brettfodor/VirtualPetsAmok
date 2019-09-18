@@ -110,6 +110,12 @@ namespace VirtualPetsAmok
             Console.ReadLine();
             Console.Clear();
         }
+        public void AdoptPet(VirtualPets selectedPet)
+        {
+            petsInShelter.Remove(selectedPet);
+            Console.WriteLine($"{selectedPet.Name} is gone forever");
+        }
+        
     }
 }
 
