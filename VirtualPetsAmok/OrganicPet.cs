@@ -50,5 +50,11 @@ namespace VirtualPetsAmok
                 Console.WriteLine("\n" + Name + "'s current health is now " + Health);
             }
         }
+        public override void TickTime()
+        {
+            this.Boredom++;
+            this.Hunger++;
+            this.Health--;
+        }
     }
 }

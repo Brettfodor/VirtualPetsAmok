@@ -115,7 +115,10 @@ namespace VirtualPetsAmok
             petsInShelter.Remove(selectedPet);
             Console.WriteLine($"{selectedPet.Name} is gone forever");
         }
-        
+        public void TickTime()
+        {
+            foreach (VirtualPets pet in petsInShelter) pet.TickTime();
+        }
     }
 }
 

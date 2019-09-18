@@ -39,7 +39,7 @@ namespace VirtualPetsAmok
         {
             
         }
-        public virtual void PlayPet()
+        public void PlayPet()
         {
             Boredom -= 10;
             if (Boredom < 0) Boredom = 0;
@@ -48,6 +48,10 @@ namespace VirtualPetsAmok
         public virtual void DoctorPet()
         {
             
+        }
+        public virtual void TickTime()
+        {
+
         }
         
     }

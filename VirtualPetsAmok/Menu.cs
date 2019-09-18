@@ -50,11 +50,11 @@ namespace VirtualPetsAmok
                 Console.WriteLine("To select an individual pet; type (!)");
 
                 Console.WriteLine("\nInteract with pet");
-                Console.WriteLine("To check your pets information: type (i)");
-                Console.WriteLine("To check your pets status: type (s)");
-                Console.WriteLine("To feed your pet: type (f)");
-                Console.WriteLine("To play with your pet: type (p)");
-                Console.WriteLine("To take your pet to the doctor: type (d)");
+                Console.WriteLine("To check all pets information: type (i)");
+                Console.WriteLine("To check all pets status: type (s)");
+                Console.WriteLine("To feed all pet: type (f)");
+                Console.WriteLine("To play all your pet: type (p)");
+                Console.WriteLine("To take all pet to the doctor: type (d)");
                 
                 userInput = Console.ReadLine();
                 if (userInput.ToLower() == "m")
@@ -91,6 +91,7 @@ namespace VirtualPetsAmok
                    VirtualPets selectedPet = this.SelectPet(myShelter);
                     this.InteractWithSelectedPet(selectedPet, myShelter);
                 }
+                myShelter.TickTime();
                 Console.Clear();
             }
 
@@ -107,85 +108,119 @@ namespace VirtualPetsAmok
                 Console.WriteLine($"{i}. {pets.Name}");
                 i++;
             }
-            int userInput = Convert.ToInt32(Console.ReadLine());
+            int userInputInt = CheckInputInListRange(myShelter);
 
-            VirtualPets selectedPet = myShelter.petsInShelter[userInput - 1];
+            VirtualPets selectedPet = myShelter.petsInShelter[userInputInt - 1];
 
             return selectedPet;
         }
+        
         public void InteractWithSelectedPet(VirtualPets selectedPet, VirtualPetShelter myShelter)
-        {if (selectedPet is RoboticPet)
+        { bool inSelectedPetMenu = true;
+            while (inSelectedPetMenu)
             {
-                Console.WriteLine("\nInteract with pet");
-                Console.WriteLine("To check your pets information: type (i)");
-                Console.WriteLine("To check your pets status: type (s)");
-                Console.WriteLine("To charge your pet's battery: type (f)");
-                Console.WriteLine("To play with your pet: type (p)");
-                Console.WriteLine("To take your pet to the mechanic: type (d)");
-                Console.WriteLine("To offer the pet up for adoption: type (a)");
-            }
-         else
-            {
-                Console.WriteLine("\nInteract with pet");
-                Console.WriteLine("To check your pets information: type (i)");
-                Console.WriteLine("To check your pets status: type (s)");
-                Console.WriteLine("To feed your pet: type (f)");
-                Console.WriteLine("To play with your pet: type (p)");
-                Console.WriteLine("To take your pet to the doctor: type (d)");
-                Console.WriteLine("To offer the pet up for adoption: type (a)");
+                if (selectedPet is RoboticPet)
+                {
+                    Console.WriteLine("\nInteract with pet");
+                    Console.WriteLine("To check your pets information: type (i)");
+                    Console.WriteLine("To check your pets status: type (s)");
+                    Console.WriteLine("To charge your pet's battery: type (f)");
+                    Console.WriteLine("To play with your pet: type (p)");
+                    Console.WriteLine("To take your pet to the mechanic: type (d)");
+                    Console.WriteLine("To offer the pet up for adoption: type (a)");
+                    Console.WriteLine("Press 'b' to go back to the main menu");
+                }
+                else
+                {
+                    Console.WriteLine("\nInteract with pet");
+                    Console.WriteLine("To check your pets information: type (i)");
+                    Console.WriteLine("To check your pets status: type (s)");
+                    Console.WriteLine("To feed your pet: type (f)");
+                    Console.WriteLine("To play with your pet: type (p)");
+                    Console.WriteLine("To take your pet to the doctor: type (d)");
+                    Console.WriteLine("To offer the pet up for adoption: type (a)");
+                    Console.WriteLine("Press 'b' to go back to the main menu");
 
-            }
 
-            string userInput = Console.ReadLine();
-            
-            
-           
-            if (userInput.ToLower() == "i")
-            {
-                Console.Clear();
-                selectedPet.CheckInfo();
-                Console.WriteLine("\nPress 'Enter' to continue");
-                Console.ReadLine();
+                }
+                string userInput = Console.ReadLine();
 
-            }
-            else if (userInput.ToLower() == "s")
-            {
-                Console.Clear();
-                selectedPet.CheckStatus();
-                Console.WriteLine("\nPress 'Enter' to continue");
-                Console.ReadLine();
-            }
-            else if (userInput.ToLower() == "f")
-            {
-                Console.Clear();
-                selectedPet.FeedPet();
-                Console.WriteLine("\nPress 'Enter' to continue");
-                Console.ReadLine();
-            }
-            else if (userInput.ToLower() == "p")
-            {
-                Console.Clear();
-                selectedPet.PlayPet();
-                Console.WriteLine("\nPress 'Enter' to continue");
-                Console.ReadLine();
-            }
-            else if (userInput.ToLower() == "d")
-            {
-                Console.Clear();
-                selectedPet.DoctorPet();
-                Console.WriteLine("\nPress 'Enter' to continue");
-                Console.ReadLine();
-            }
-            else if (userInput.ToLower() == "a")
-            {
-                Console.Clear();
-                myShelter.AdoptPet(selectedPet);
-                Console.WriteLine("\nPress 'Enter' to continue");
-                Console.ReadLine();
-            }
+                if (userInput.ToLower() == "i")
+                {
+                    Console.Clear();
+                    selectedPet.CheckInfo();
+                    Console.WriteLine("\nPress 'Enter' to continue");
+                    Console.ReadLine();
 
-            Console.Clear();
+                }
+                else if (userInput.ToLower() == "s")
+                {
+                    Console.Clear();
+                    selectedPet.CheckStatus();
+                    Console.WriteLine("\nPress 'Enter' to continue");
+                    Console.ReadLine();
+                }
+                else if (userInput.ToLower() == "f")
+                {
+                    Console.Clear();
+                    selectedPet.FeedPet();
+                    Console.WriteLine("\nPress 'Enter' to continue");
+                    Console.ReadLine();
+                }
+                else if (userInput.ToLower() == "p")
+                {
+                    Console.Clear();
+                    selectedPet.PlayPet();
+                    Console.WriteLine("\nPress 'Enter' to continue");
+                    Console.ReadLine();
+                }
+                else if (userInput.ToLower() == "d")
+                {
+                    Console.Clear();
+                    selectedPet.DoctorPet();
+                    Console.WriteLine("\nPress 'Enter' to continue");
+                    Console.ReadLine();
+                }
+                else if (userInput.ToLower() == "a")
+                {
+                    Console.Clear();
+                    myShelter.AdoptPet(selectedPet);
+                    Console.WriteLine("\nPress 'Enter' to continue");
+                    Console.ReadLine();
+                    inSelectedPetMenu = false;
+                }
+                else if (userInput.ToLower() == "b")
+                { inSelectedPetMenu = false; }
+                myShelter.TickTime();
+                Console.Clear();
+            }
         }
+        public int CheckInputInListRange(VirtualPetShelter myShelter)
+        {
+            int userInputInt = 0;
+            bool correctInput = false;
+            while (correctInput == false)
+            {
+                bool isNumeric = false;
+                while (isNumeric == false)
+                {
+                    string userInput = Console.ReadLine();
 
+                    isNumeric = int.TryParse(userInput, out userInputInt);
+                }
+                bool isInRange = false;
+                while (isInRange == false)
+                {
+                    string userInput = Console.ReadLine();
+
+                    isNumeric = int.TryParse(userInput, out userInputInt);
+
+                    if (userInputInt > 0 && userInputInt <= myShelter.petsInShelter.Count) isInRange = true;
+                }
+                correctInput = true;
+                Console.Clear();
+            }
+            return userInputInt;
+        }
     }
 }

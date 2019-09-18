@@ -31,7 +31,7 @@ namespace VirtualPetsAmok
         }
         public override void FeedPet()
         {
-            Battery -= 10;
+            Battery += 10;
             if (Battery < 0) Battery = 0;
             Console.WriteLine("\n" + Name + "'s current battery is now " + Battery);
         }
@@ -48,6 +48,12 @@ namespace VirtualPetsAmok
                 if (Performance > 100) Performance = 100;
                 Console.WriteLine("\n" + Name + "'s current performance is now " + Performance);
             }
+        }
+        public override void TickTime()
+        {
+            this.Battery--;
+            this.Boredom++;
+            this.Performance--;
         }
     }
 }
