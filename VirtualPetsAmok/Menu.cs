@@ -192,6 +192,7 @@ namespace VirtualPetsAmok
                 }
                 else if (userInput.ToLower() == "b")
                 { inSelectedPetMenu = false; }
+
                 myShelter.TickTime();
                 Console.Clear();
             }

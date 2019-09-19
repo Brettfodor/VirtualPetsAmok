@@ -5,6 +5,11 @@ namespace VirtualPetsAmok.Tests
 {
     public class VirtualPetsAmokTests
     {
+        OrganicPet opet;
+        public VirtualPetsAmokTests()
+        {
+            opet = new OrganicPet("bob", "thing");
+        }
         [Fact]
         public void Can_Create_Pet_Instance()
         {
@@ -15,7 +20,7 @@ namespace VirtualPetsAmok.Tests
         public void Pet_Has_Name()
         {
             // Arrange 
-          var myPet =  new VirtualPets();
+            var myPet = new VirtualPets();
 
             //Act
             myPet.Name = "Rainbow";
@@ -61,12 +66,31 @@ namespace VirtualPetsAmok.Tests
 
             // Assert
             Assert.Equal(40, myPet.Health);
+        }
+        [Fact]
+        public void Can_Feed_Pet()
+        {
+            // Arrange 
 
-            
+
+            //Act
+            opet.FeedPet();
+
+            // Assert
+            Assert.Equal(40, opet.Hunger);
+        }
+        [Fact]
+        public void Can_Take_Pet_ToDoctor()
+        {
+            // Arrange 
+
+
+            //Act
+            opet.DoctorPet();
+
+            // Assert
+            Assert.Equal(80, opet.Health);
 
         }
-        
-
-            
     }
 }
