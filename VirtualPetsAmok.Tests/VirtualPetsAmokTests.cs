@@ -25,10 +25,10 @@ namespace VirtualPetsAmok.Tests
 
         }
         [Fact]
-        public void Pet_Has_Hunger()
+        public void Organic_Pet_Has_Hunger()
         {
             // Arrange 
-            var myPet = new VirtualPets();
+            var myPet = new OrganicPet("bob", "species");
 
             //Act
             myPet.Hunger = 40;
@@ -54,7 +54,7 @@ namespace VirtualPetsAmok.Tests
         public void Pet_Has_Health()
         {
             // Arrange 
-            var myPet = new VirtualPets();
+            var myPet = new OrganicPet("bob", "species");
 
             //Act
             myPet.Health = 40;
@@ -65,19 +65,7 @@ namespace VirtualPetsAmok.Tests
             
 
         }
-        [Fact]
-        public void Shelter_Exists_in_Game()
-        {//Arrange
-            var petShelter = new VirtualPetShelter();
-                
-                }
-        [Fact]
-        public void Shelter_Adds_Pets()
-        {
-            var myShelter = new VirtualPetShelter();
-
-            
-        }
+        
 
             
     }
