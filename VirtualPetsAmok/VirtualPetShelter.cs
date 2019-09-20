@@ -19,6 +19,7 @@ namespace VirtualPetsAmok
             Console.WriteLine("Should your pet be Organic or Robotic? (type 'o' for Organic or 'r' for Robotic)");
             string type = Console.ReadLine();
             //Get name from user
+            Console.Clear();
             Console.WriteLine("What should your pet's name be?");
 
             string Name = Console.ReadLine();
