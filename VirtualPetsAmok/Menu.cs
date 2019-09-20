@@ -100,6 +100,8 @@ namespace VirtualPetsAmok
         }
         public VirtualPets SelectPet(VirtualPetShelter myShelter)
         {
+            Console.Clear();
+
             int i = 1;
 
             Console.WriteLine("Please choose the number of the pet you'd like to interact with");
@@ -120,6 +122,7 @@ namespace VirtualPetsAmok
         { bool inSelectedPetMenu = true;
             while (inSelectedPetMenu)
             {
+                Console.Clear();
                 if (selectedPet is RoboticPet)
                 {
                     Console.WriteLine("\nInteract with pet");
